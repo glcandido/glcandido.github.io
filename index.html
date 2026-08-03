@@ -35,6 +35,11 @@
     .section { padding: 96px 0; }
     .section-title { margin: 8px 0 12px; font-size: clamp(1.9rem, 4vw, 3rem); letter-spacing: -.04em; line-height: 1.1; }
     .section-copy { max-width: 650px; margin: 0; color: var(--muted); }
+    .about { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .about-intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(28px, 7vw, 96px); }
+    .about-copy { max-width: 650px; color: var(--muted); }
+    .about-copy p { margin: 0 0 18px; }
+    .about-copy p:last-child { margin-bottom: 0; }
 
     .nav-wrap { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: rgba(9, 17, 31, .86); backdrop-filter: blur(16px); }
     nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -113,6 +118,7 @@
       .dashboard { max-width: 620px; }
       .values { grid-template-columns: 1fr; }
       .project-visual { min-height: 300px; }
+      .about-intro { grid-template-columns: 1fr; gap: 18px; }
     }
     @media (max-width: 610px) {
       .shell { width: min(calc(100% - 28px), var(--max)); }
@@ -132,6 +138,7 @@
     <nav class="shell" aria-label="Main navigation">
       <a class="brand" href="#top">Guilherme <span>Cândido</span></a>
       <div class="nav-links">
+        <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#services">How I help</a>
         <a href="#contact" class="nav-cta">Get in touch</a>
@@ -172,6 +179,20 @@
           </svg>
         </div>
         <div class="dashboard-foot"><div class="mini"></div><div class="mini"></div></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-intro">
+        <div>
+          <p class="eyebrow">About me</p>
+          <h2 class="section-title">Business-minded analytics, grounded in real operations.</h2>
+        </div>
+        <div class="about-copy">
+          <p>Hi, I’m Guilherme. I’m building a career in Business Analytics and Business Intelligence because I enjoy turning everyday operational information into clearer answers and better decisions.</p>
+          <p>My background in customer-facing and operational roles has shown me how much time businesses lose to manual processes, scattered spreadsheets, and reporting that does not answer the real question. That is where I like to work: understanding the process, improving the data, and making the result useful to the people running the business.</p>
+          <p>I bring a practical toolkit across SQL, Tableau, Excel, Google Sheets, reporting automation, and data quality—always with the business context in mind.</p>
+        </div>
       </div>
     </section>
 
