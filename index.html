@@ -86,9 +86,12 @@
     .value p { margin: 0; color: var(--muted); font-size: .9rem; }
 
     .project { display: grid; grid-template-columns: .95fr 1.05fr; gap: 0; overflow: hidden; margin-top: 42px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .project-stacked { grid-template-columns: 1fr; }
     .project-visual { position: relative; min-height: 360px; padding: 30px; background: linear-gradient(135deg, #153c61, #0d1b30 68%); }
-    .project-visual-image { padding: 0; overflow: hidden; }
-    .project-visual-image img { display: block; width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+    .project-visual-image { padding: 0; overflow: hidden; background: #071222; }
+    .project-stacked .project-visual-image { min-height: 0; aspect-ratio: 16 / 10; }
+    .project-visual-image img { display: block; width: 100%; height: 100%; min-height: 360px; object-fit: contain; }
+    .project-stacked .project-visual-image img { min-height: 0; }
     .visual-label { color: #bfe6ff; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .bar-group { display: flex; align-items: end; gap: 12px; height: 210px; margin-top: 28px; padding: 18px; border: 1px solid rgba(191,230,255,.2); border-radius: 12px; background: rgba(4, 13, 27, .35); }
     .bar { flex: 1; border-radius: 5px 5px 0 0; background: linear-gradient(180deg, var(--blue), var(--blue-dark)); }
@@ -206,7 +209,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project project-stacked">
         <div class="project-visual project-visual-image">
           <img src="assets/operational-automation-cover.png" alt="Illustrative workflow showing sales data flowing through validation into operational planning" />
         </div>
@@ -221,7 +224,7 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project project-stacked">
         <div class="project-visual project-visual-image">
           <img src="assets/sales-analytics-cover.png" alt="Illustrative sales and customer performance dashboard with trends and customer segmentation" />
         </div>
