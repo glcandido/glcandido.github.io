@@ -85,23 +85,21 @@
     .value h3 { margin: 0 0 7px; font-size: 1rem; }
     .value p { margin: 0; color: var(--muted); font-size: .9rem; }
 
-    .project { display: grid; grid-template-columns: .95fr 1.05fr; gap: 0; overflow: hidden; margin-top: 42px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
-    .project-stacked { grid-template-columns: 1fr; }
-    .project-visual { position: relative; min-height: 360px; padding: 30px; background: linear-gradient(135deg, #153c61, #0d1b30 68%); }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 42px; }
+    .project { display: flex; flex-direction: column; overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .project-visual { position: relative; display: flex; flex-direction: column; min-height: 0; aspect-ratio: 1.57; padding: 22px; background: linear-gradient(135deg, #153c61, #0d1b30 68%); }
     .project-visual-image { padding: 0; overflow: hidden; background: #071222; }
-    .project-stacked .project-visual-image { min-height: 0; aspect-ratio: 16 / 10; }
-    .project-visual-image img { display: block; width: 100%; height: 100%; min-height: 360px; object-fit: contain; }
-    .project-stacked .project-visual-image img { min-height: 0; }
+    .project-visual-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .visual-label { color: #bfe6ff; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-    .bar-group { display: flex; align-items: end; gap: 12px; height: 210px; margin-top: 28px; padding: 18px; border: 1px solid rgba(191,230,255,.2); border-radius: 12px; background: rgba(4, 13, 27, .35); }
+    .bar-group { display: flex; flex: 1; align-items: end; gap: 10px; min-height: 0; margin-top: 16px; padding: 16px; border: 1px solid rgba(191,230,255,.2); border-radius: 12px; background: rgba(4, 13, 27, .35); }
     .bar { flex: 1; border-radius: 5px 5px 0 0; background: linear-gradient(180deg, var(--blue), var(--blue-dark)); }
     .bar:nth-child(2) { height: 53%; } .bar:nth-child(3) { height: 78%; } .bar:nth-child(4) { height: 44%; } .bar:nth-child(5) { height: 91%; } .bar:nth-child(6) { height: 65%; }
-    .project-body { padding: clamp(28px, 5vw, 54px); }
+    .project-body { display: flex; flex: 1; flex-direction: column; padding: 28px; }
     .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0; }
     .tag { padding: 4px 9px; color: var(--blue); border: 1px solid rgba(113,199,255,.24); border-radius: 999px; background: rgba(113,199,255,.08); font-size: .72rem; font-weight: 750; }
     .project h3 { max-width: 560px; margin: 9px 0 10px; font-size: clamp(1.5rem, 3vw, 2.2rem); letter-spacing: -.04em; line-height: 1.1; }
     .project p { color: var(--muted); }
-    .project-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 24px; }
     .text-link { color: var(--blue); font-size: .9rem; font-weight: 750; text-decoration: none; }
     .text-link:hover { text-decoration: underline; }
 
@@ -111,6 +109,12 @@
     .work-card p { margin: 0; color: var(--muted); }
     .work-card small { display: block; margin-bottom: 14px; color: var(--orange); font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
 
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 42px; }
+    .skill-card { padding: 26px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.025); }
+    .skill-card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+    .skill-card p { min-height: 52px; margin: 0; color: var(--muted); font-size: .9rem; }
+    .skill-card .tags { margin-bottom: 0; }
+
     .contact { padding: 88px 0; }
     .contact-box { display: flex; align-items: end; justify-content: space-between; gap: 32px; padding: clamp(30px, 6vw, 64px); border: 1px solid rgba(113,199,255,.28); border-radius: 20px; background: linear-gradient(135deg, rgba(21, 60, 97, .8), rgba(16, 29, 49, .9)); }
     .contact-box h2 { max-width: 670px; margin: 8px 0 0; font-size: clamp(2rem, 4vw, 3.3rem); letter-spacing: -.05em; line-height: 1.05; }
@@ -118,11 +122,11 @@
     footer .shell { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
     @media (max-width: 850px) {
-      .hero, .project { grid-template-columns: 1fr; }
+      .hero { grid-template-columns: 1fr; }
       .hero { min-height: auto; padding: 96px 0 72px; gap: 42px; }
       .dashboard { max-width: 620px; }
-      .values { grid-template-columns: 1fr; }
-      .project-visual { min-height: 300px; }
+      .values, .skills-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .about-intro { grid-template-columns: 1fr; gap: 18px; }
     }
     @media (max-width: 610px) {
@@ -132,7 +136,7 @@
       .dashboard { min-height: 0; }
       .chart { height: 180px; }
       .chart svg { height: 118px; }
-      .work-grid { grid-template-columns: 1fr; }
+      .work-grid, .projects-grid { grid-template-columns: 1fr; }
       .contact-box { align-items: start; flex-direction: column; }
       .section { padding: 70px 0; }
     }
@@ -145,7 +149,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#work">Work</a>
-        <a href="#services">How I help</a>
+        <a href="#skills">Skills</a>
         <a href="#contact" class="nav-cta">Get in touch</a>
       </div>
     </nav>
@@ -191,6 +195,7 @@
       <p class="eyebrow">Selected work</p>
       <h2 class="section-title">E-commerce growth & retention analytics.</h2>
       <p class="section-copy">An end-to-end portfolio project showing how raw transactional data becomes an executive view of performance and customer behaviour.</p>
+      <div class="projects-grid">
       <article class="project">
         <div class="project-visual" aria-hidden="true">
           <p class="visual-label">Executive dashboard</p>
@@ -209,7 +214,7 @@
         </div>
       </article>
 
-      <article class="project project-stacked">
+      <article class="project">
         <div class="project-visual project-visual-image">
           <img src="assets/operational-automation-cover.png" alt="Illustrative workflow showing sales data flowing through validation into operational planning" />
         </div>
@@ -224,7 +229,7 @@
         </div>
       </article>
 
-      <article class="project project-stacked">
+      <article class="project">
         <div class="project-visual project-visual-image">
           <img src="assets/sales-analytics-cover.png" alt="Illustrative sales and customer performance dashboard with trends and customer segmentation" />
         </div>
@@ -238,16 +243,17 @@
           <p class="meta">Commercial data and dashboard visuals are intentionally anonymised.</p>
         </div>
       </article>
+      </div>
     </section>
 
-    <section class="section" id="services">
-      <p class="eyebrow">What I bring</p>
-      <h2 class="section-title">Analysis that makes the next action clearer.</h2>
-      <p class="section-copy">Good reporting is not more numbers. It is a shared, trusted view of what happened, why it matters, and where to look next.</p>
-      <div class="values">
-        <article class="value"><div class="value-icon">01</div><h3>Reporting that people use</h3><p>Clear KPI views and dashboards designed around the questions decision-makers actually need answered.</p></article>
-        <article class="value"><div class="value-icon">02</div><h3>Reliable data foundations</h3><p>Cleaning, validating, and structuring operational data before drawing conclusions from it.</p></article>
-        <article class="value"><div class="value-icon">03</div><h3>Less repetitive work</h3><p>Practical automation for recurring reports and spreadsheet-heavy processes so teams can focus on decisions.</p></article>
+    <section class="section" id="skills">
+      <p class="eyebrow">Expertise</p>
+      <h2 class="section-title">Skills used to turn data into useful work.</h2>
+      <p class="section-copy">A practical toolkit across analysis, data quality, reporting, and operational automation.</p>
+      <div class="skills-grid">
+        <article class="skill-card"><h3>Analysis &amp; reporting</h3><p>Turning raw data into clear answers, KPI views, and decision-ready reporting.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power Query</span><span class="tag">PivotTables</span><span class="tag">Tableau</span></div></article>
+        <article class="skill-card"><h3>Data quality &amp; process</h3><p>Improving the reliability of operational information before it drives a decision.</p><div class="tags"><span class="tag">Data cleaning</span><span class="tag">Validation</span><span class="tag">KPI design</span><span class="tag">Data storytelling</span></div></article>
+        <article class="skill-card"><h3>Automation &amp; operations</h3><p>Removing repetitive spreadsheet work while keeping everyday business processes dependable.</p><div class="tags"><span class="tag">Google Sheets</span><span class="tag">Apps Script</span><span class="tag">Advanced formulas</span><span class="tag">API integration</span></div></article>
       </div>
     </section>
 
