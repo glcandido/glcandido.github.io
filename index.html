@@ -50,11 +50,13 @@
     .nav-links a:hover { color: var(--blue); }
     .nav-links .nav-cta { color: #06101d; background: var(--blue); padding: 8px 14px; border-radius: 8px; }
 
-    .hero { min-height: calc(100vh - 72px); display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 64px; padding: 72px 0; }
+    .hero { min-height: calc(100vh - 72px); display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: 64px; padding: 72px 0; }
     h1 { max-width: 670px; margin: 12px 0 20px; font-size: clamp(3rem, 6vw, 5.25rem); letter-spacing: -.065em; line-height: .98; }
     h1 em { color: var(--blue); font-style: normal; }
-    .hero-copy { max-width: 610px; margin: 0 0 30px; color: var(--muted); font-size: 1.08rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-copy { max-width: 610px; margin: 0 0 28px; color: var(--muted); font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+    .hero-actions a { color: var(--blue); font-size: .94rem; font-weight: 750; text-decoration: none; }
+    .hero-actions a:hover { text-decoration: underline; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border: 1px solid var(--line); border-radius: 9px; font-weight: 750; text-decoration: none; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
     .button:hover { transform: translateY(-2px); border-color: var(--blue); }
     .button-primary { color: #06101d; border-color: var(--blue); background: var(--blue); }
@@ -64,20 +66,13 @@
     .proof strong { display: block; font-size: 1.2rem; }
     .proof span { color: var(--muted); font-size: .84rem; }
 
-    .dashboard { position: relative; min-height: 410px; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(20, 36, 60, .95), rgba(12, 25, 43, .95)); box-shadow: 0 32px 80px rgba(0,0,0,.3); }
-    .dashboard-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-    .dashboard-head strong { font-size: .88rem; }
-    .dashboard-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 12px rgba(110, 231, 190, .6); }
-    .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .kpi { padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.025); }
-    .kpi span { display: block; color: var(--muted); font-size: .67rem; }
-    .kpi strong { font-size: 1.1rem; }
-    .chart { margin-top: 12px; padding: 16px; height: 208px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.02); }
-    .chart-label { color: var(--muted); font-size: .7rem; }
-    .chart svg { display: block; width: 100%; height: 150px; margin-top: 12px; overflow: visible; }
-    .dashboard-foot { display: grid; grid-template-columns: 1.2fr .8fr; gap: 12px; margin-top: 12px; }
-    .mini { height: 54px; border: 1px solid var(--line); border-radius: 10px; background: linear-gradient(90deg, rgba(113,199,255,.17), rgba(113,199,255,.03)); }
-    .mini:nth-child(2) { background: linear-gradient(90deg, rgba(110,231,190,.17), rgba(110,231,190,.03)); }
+    .profile-card { justify-self: end; width: min(100%, 345px); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(20, 36, 60, .95), rgba(12, 25, 43, .95)); box-shadow: 0 32px 80px rgba(0,0,0,.3); }
+    .profile-card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 18%; }
+    .profile-details { padding: 22px 24px 25px; }
+    .profile-details p { margin: 0; }
+    .profile-location { color: var(--blue); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .profile-role { margin-top: 7px !important; font-size: 1.2rem; font-weight: 800; letter-spacing: -.02em; }
+    .profile-tools { margin-top: 13px !important; padding-top: 13px; color: var(--muted); border-top: 1px solid var(--line); font-size: .84rem; }
 
     .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 42px; }
     .value { padding: 24px; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.025); }
@@ -124,7 +119,7 @@
     @media (max-width: 850px) {
       .hero { grid-template-columns: 1fr; }
       .hero { min-height: auto; padding: 96px 0 72px; gap: 42px; }
-      .dashboard { max-width: 620px; }
+      .profile-card { justify-self: start; }
       .values, .skills-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .about-intro { grid-template-columns: 1fr; gap: 18px; }
@@ -132,10 +127,7 @@
     @media (max-width: 610px) {
       .shell { width: min(calc(100% - 28px), var(--max)); }
       .nav-links a:not(.nav-cta) { display: none; }
-      .kpis { grid-template-columns: 1fr; }
-      .dashboard { min-height: 0; }
-      .chart { height: 180px; }
-      .chart svg { height: 118px; }
+      .profile-card { width: min(100%, 360px); }
       .work-grid, .projects-grid { grid-template-columns: 1fr; }
       .contact-box { align-items: start; flex-direction: column; }
       .section { padding: 70px 0; }
@@ -158,12 +150,14 @@
   <main id="top" class="shell">
     <section class="hero" aria-labelledby="hero-title">
       <div>
-        <p class="eyebrow">Analytics & business intelligence</p>
+        <p class="eyebrow">Business analyst · Analytics & BI</p>
         <h1 id="hero-title">Turning business data into <em>clearer decisions.</em></h1>
-        <p class="hero-copy">I build practical dashboards, reporting workflows, and analysis that help teams see performance, spot opportunities, and spend less time fighting spreadsheets.</p>
+        <p class="hero-copy">Hi, I’m Guilherme. I use analytics, reporting, and workflow automation to help teams spend less time fighting spreadsheets and more time acting on the right information.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#work">View selected work</a>
-          <a class="button button-secondary" href="#contact">Start a conversation</a>
+          <a href="#work">View projects ↓</a>
+          <a href="https://www.linkedin.com/in/guilhermelcandido/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="/assets/GuilhermeCandido_CV.docx" target="_blank" rel="noreferrer">Download CV ↓</a>
+          <a href="#about">About me ↓</a>
         </div>
         <div class="hero-proof" aria-label="Key strengths">
           <div class="proof"><strong>SQL + BI</strong><span>From raw data to usable reporting</span></div>
@@ -171,24 +165,14 @@
         </div>
       </div>
 
-      <div class="dashboard" aria-label="Illustrative analytics dashboard preview">
-        <div class="dashboard-head"><strong>Performance overview</strong><span class="dashboard-dot" aria-label="Current"></span></div>
-        <div class="kpis">
-          <div class="kpi"><span>Revenue</span><strong>€124.8k</strong></div>
-          <div class="kpi"><span>Orders</span><strong>1,486</strong></div>
-          <div class="kpi"><span>Repeat rate</span><strong>27.4%</strong></div>
+      <aside class="profile-card" aria-label="Profile summary">
+        <img src="/assets/guilherme-candido-headshot.png" alt="Guilherme Cândido" />
+        <div class="profile-details">
+          <p class="profile-location">Based in Ireland</p>
+          <p class="profile-role">Business Analyst</p>
+          <p class="profile-tools">SQL · Excel · Power Query · Tableau · Automation</p>
         </div>
-        <div class="chart">
-          <div class="chart-label">Monthly performance</div>
-          <svg viewBox="0 0 480 150" role="img" aria-label="Illustrative upward-trending line chart">
-            <path d="M0 122 H480 M0 82 H480 M0 42 H480" stroke="rgba(181,208,255,.12)" stroke-width="1" fill="none" />
-            <path d="M0 120 C35 104 58 112 89 92 S145 108 178 74 S230 76 260 62 S315 79 349 40 S411 48 480 11" stroke="#71c7ff" stroke-width="4" fill="none" stroke-linecap="round" />
-            <path d="M0 120 C35 104 58 112 89 92 S145 108 178 74 S230 76 260 62 S315 79 349 40 S411 48 480 11 V150 H0 Z" fill="url(#fill)" opacity=".34" />
-            <defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#71c7ff"/><stop offset="1" stop-color="#71c7ff" stop-opacity="0"/></linearGradient></defs>
-          </svg>
-        </div>
-        <div class="dashboard-foot"><div class="mini"></div><div class="mini"></div></div>
-      </div>
+      </aside>
     </section>
 
     <section class="section" id="work">
