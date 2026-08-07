@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1570 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative Olist e-commerce analytics dashboard</title>
+  <desc id="desc">A stylised dashboard cover with a sales trend and category comparison bars.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123e61"/><stop offset="1" stop-color="#091629"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6ee7be"/><stop offset="1" stop-color="#71c7ff"/></linearGradient>
+  </defs>
+  <rect width="1570" height="1000" fill="url(#bg)"/>
+  <text x="100" y="125" fill="#bfe6ff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="5">OLIST E-COMMERCE ANALYSIS</text>
+  <text x="100" y="180" fill="#9db1ce" font-family="Arial, sans-serif" font-size="26">Executive performance &amp; customer behaviour</text>
+  <g transform="translate(100 250)">
+    <rect width="845" height="570" rx="24" fill="#0b1b31" stroke="#46708f" stroke-opacity=".55"/>
+    <text x="50" y="65" fill="#c9d7e9" font-family="Arial, sans-serif" font-size="25" font-weight="700">Sales trend</text>
+    <g stroke="#38546f" stroke-opacity=".58" stroke-width="2"><path d="M50 150H795M50 270H795M50 390H795M50 510H795"/></g>
+    <path d="M50 488 C120 424 156 460 221 380 S333 440 404 316 S515 355 585 242 S700 295 795 137" fill="none" stroke="url(#line)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M50 488 C120 424 156 460 221 380 S333 440 404 316 S515 355 585 242 S700 295 795 137 V510H50Z" fill="#71c7ff" opacity=".12"/>
+    <g fill="#c9d7e9" font-family="Arial, sans-serif" font-size="20"><text x="50" y="545">Period 1</text><text x="270" y="545">Period 2</text><text x="505" y="545">Period 3</text><text x="700" y="545">Period 4</text></g>
+  </g>
+  <g transform="translate(1010 250)">
+    <rect width="460" height="570" rx="24" fill="#0b1b31" stroke="#46708f" stroke-opacity=".55"/>
+    <text x="44" y="65" fill="#c9d7e9" font-family="Arial, sans-serif" font-size="25" font-weight="700">Category view</text>
+    <g transform="translate(44 120)">
+      <g fill="#a6b8d0" font-family="Arial, sans-serif" font-size="19"><text y="50">Category A</text><text y="145">Category B</text><text y="240">Category C</text><text y="335">Category D</text></g>
+      <g transform="translate(155 0)"><rect y="20" width="204" height="34" rx="8" fill="#71c7ff"/><rect y="115" width="151" height="34" rx="8" fill="#6ee7be"/><rect y="210" width="250" height="34" rx="8" fill="#71c7ff"/><rect y="305" width="113" height="34" rx="8" fill="#6ee7be"/></g>
+    </g>
+  </g>
+  <text x="100" y="914" fill="#6ee7be" font-family="Arial, sans-serif" font-size="25" font-weight="700">SQL · Tableau · Data cleaning · KPI design</text>
+</svg>

@@ -86,23 +86,17 @@
     .project-visual-image { padding: 0; overflow: hidden; background: #071222; }
     .project-visual-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .visual-label { color: #bfe6ff; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-    .bar-group { display: flex; flex: 1; align-items: end; gap: 10px; min-height: 0; margin-top: 16px; padding: 16px; border: 1px solid rgba(191,230,255,.2); border-radius: 12px; background: rgba(4, 13, 27, .35); }
-    .bar { flex: 1; border-radius: 5px 5px 0 0; background: linear-gradient(180deg, var(--blue), var(--blue-dark)); }
-    .bar:nth-child(2) { height: 53%; } .bar:nth-child(3) { height: 78%; } .bar:nth-child(4) { height: 44%; } .bar:nth-child(5) { height: 91%; } .bar:nth-child(6) { height: 65%; }
     .project-body { display: flex; flex: 1; flex-direction: column; padding: 28px; }
     .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0; }
     .tag { padding: 4px 9px; color: var(--blue); border: 1px solid rgba(113,199,255,.24); border-radius: 999px; background: rgba(113,199,255,.08); font-size: .72rem; font-weight: 750; }
     .project h3 { max-width: 560px; margin: 9px 0 10px; font-size: clamp(1.5rem, 3vw, 2.2rem); letter-spacing: -.04em; line-height: 1.1; }
     .project p { color: var(--muted); }
+    .project-points { display: grid; gap: 8px; margin: 2px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: .9rem; }
+    .project-points li { padding-left: 18px; position: relative; }
+    .project-points li::before { position: absolute; left: 0; color: var(--mint); content: "•"; }
     .project-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 24px; }
     .text-link { color: var(--blue); font-size: .9rem; font-weight: 750; text-decoration: none; }
     .text-link:hover { text-decoration: underline; }
-
-    .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 42px; }
-    .work-card { padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.025); }
-    .work-card h3 { margin: 0 0 8px; font-size: 1.1rem; }
-    .work-card p { margin: 0; color: var(--muted); }
-    .work-card small { display: block; margin-bottom: 14px; color: var(--orange); font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
 
     .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 42px; }
     .skill-card { padding: 26px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.025); }
@@ -128,7 +122,7 @@
       .shell { width: min(calc(100% - 28px), var(--max)); }
       .nav-links a:not(.nav-cta) { display: none; }
       .profile-card { width: min(100%, 360px); }
-      .work-grid, .projects-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
       .contact-box { align-items: start; flex-direction: column; }
       .section { padding: 70px 0; }
     }
@@ -140,7 +134,7 @@
       <a class="brand" href="#top">Guilherme <span>Cândido</span></a>
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#work">Work</a>
+        <a href="#work">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact" class="nav-cta">Get in touch</a>
       </div>
@@ -176,20 +170,24 @@
     </section>
 
     <section class="section" id="work">
-      <p class="eyebrow">Selected work</p>
-      <h2 class="section-title">E-commerce growth & retention analytics.</h2>
-      <p class="section-copy">An end-to-end portfolio project showing how raw transactional data becomes an executive view of performance and customer behaviour.</p>
+      <p class="eyebrow">Projects</p>
+      <h2 class="section-title">Analytics and automation work.</h2>
+      <p class="section-copy">A mix of public portfolio work and anonymised real-world case studies, focused on making business data easier to understand and use.</p>
       <div class="projects-grid">
       <article class="project">
-        <div class="project-visual" aria-hidden="true">
-          <p class="visual-label">Executive dashboard</p>
-          <div class="bar-group"><span class="bar" style="height:34%"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <div class="project-visual project-visual-image">
+          <img src="assets/olist-ecommerce-cover.svg" alt="Illustrative Olist e-commerce dashboard with sales trend and category comparison" />
         </div>
         <div class="project-body">
           <p class="eyebrow">Olist e-commerce analysis</p>
           <h3>From transactions to commercial questions.</h3>
           <div class="tags"><span class="tag">SQL</span><span class="tag">Tableau</span><span class="tag">Data cleaning</span><span class="tag">KPIs</span></div>
           <p>Built a clean analysis layer and Tableau dashboards to explore GMV, orders, customer growth, repeat purchase share, and category and product performance.</p>
+          <ul class="project-points">
+            <li>Prepared raw transactional data for consistent reporting.</li>
+            <li>Created executive and commercial dashboard views in Tableau.</li>
+            <li>Explored customer acquisition, retention, and product performance.</li>
+          </ul>
           <div class="project-links">
             <a class="text-link" href="https://public.tableau.com/views/OlistExecutiveOverview/ExecutiveOverviewGMVProxy?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noreferrer">Executive dashboard ↗</a>
             <a class="text-link" href="https://public.tableau.com/views/OlistExecutiveOverviewCommercialInsights/CommercialInsights?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noreferrer">Commercial insights ↗</a>
@@ -252,15 +250,6 @@
           <p>My background in customer-facing and operational roles has shown me how much time businesses lose to manual processes, scattered spreadsheets, and reporting that does not answer the real question. That is where I like to work: understanding the process, improving the data, and making the result useful to the people running the business.</p>
           <p>I bring a practical toolkit across SQL, Tableau, Excel, Google Sheets, reporting automation, and data quality—always with the business context in mind.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow">How I work</p>
-      <h2 class="section-title">Business questions first. Tools second.</h2>
-      <div class="work-grid">
-        <article class="work-card"><small>For teams</small><h3>Make reporting easier to trust</h3><p>I start with the decisions that matter, then define the metrics, data checks, and reporting view needed to support them.</p></article>
-        <article class="work-card"><small>For small businesses</small><h3>Understand what your sales data is saying</h3><p>A focused sales-data review can reveal performance trends, strong products, slower periods, and useful next questions to investigate.</p></article>
       </div>
     </section>
 
