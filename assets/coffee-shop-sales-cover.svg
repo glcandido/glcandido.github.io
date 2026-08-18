@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1570 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative coffee shop sales analytics dashboard</title>
+  <desc id="desc">A stylised analytics cover showing coffee shop revenue trends and store performance in the visual style of the portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123e61"/><stop offset="1" stop-color="#091629"/></linearGradient>
+    <linearGradient id="trend" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c58b3a"/><stop offset=".55" stop-color="#71c7ff"/><stop offset="1" stop-color="#6ee7be"/></linearGradient>
+  </defs>
+  <rect width="1570" height="1000" fill="url(#bg)"/>
+  <text x="100" y="125" fill="#bfe6ff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="5">COFFEE SHOP SALES ANALYSIS</text>
+  <text x="100" y="180" fill="#9db1ce" font-family="Arial, sans-serif" font-size="26">Store, product &amp; demand performance</text>
+  <g transform="translate(100 250)">
+    <rect width="845" height="570" rx="24" fill="#0b1b31" stroke="#46708f" stroke-opacity=".55"/>
+    <text x="50" y="65" fill="#c9d7e9" font-family="Arial, sans-serif" font-size="25" font-weight="700">Revenue trend</text>
+    <g stroke="#38546f" stroke-opacity=".58" stroke-width="2"><path d="M50 150H795M50 270H795M50 390H795M50 510H795"/></g>
+    <path d="M50 462 C120 478 170 438 225 392 S330 372 405 322 S510 275 585 222 S700 185 795 150" fill="none" stroke="url(#trend)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M50 462 C120 478 170 438 225 392 S330 372 405 322 S510 275 585 222 S700 185 795 150 V510H50Z" fill="#71c7ff" opacity=".10"/>
+    <g fill="#c9d7e9" font-family="Arial, sans-serif" font-size="20"><text x="50" y="545">Jan</text><text x="190" y="545">Feb</text><text x="330" y="545">Mar</text><text x="470" y="545">Apr</text><text x="610" y="545">May</text><text x="750" y="545">Jun</text></g>
+  </g>
+  <g transform="translate(1010 250)">
+    <rect width="460" height="570" rx="24" fill="#0b1b31" stroke="#46708f" stroke-opacity=".55"/>
+    <text x="44" y="65" fill="#c9d7e9" font-family="Arial, sans-serif" font-size="25" font-weight="700">Store performance</text>
+    <g transform="translate(44 125)" font-family="Arial, sans-serif">
+      <text x="0" y="38" fill="#a6b8d0" font-size="19">Astoria</text><rect x="0" y="60" width="330" height="38" rx="9" fill="#21344d"/><rect x="0" y="60" width="292" height="38" rx="9" fill="#6f4e37"/>
+      <text x="0" y="150" fill="#a6b8d0" font-size="19">Hell's Kitchen</text><rect x="0" y="172" width="330" height="38" rx="9" fill="#21344d"/><rect x="0" y="172" width="318" height="38" rx="9" fill="#2f5d62"/>
+      <text x="0" y="262" fill="#a6b8d0" font-size="19">Lower Manhattan</text><rect x="0" y="284" width="330" height="38" rx="9" fill="#21344d"/><rect x="0" y="284" width="284" height="38" rx="9" fill="#c58b3a"/>
+    </g>
+  </g>
+  <g transform="translate(105 850)">
+    <circle cx="25" cy="25" r="24" fill="#6f4e37"/>
+    <path d="M14 17h20v13c0 8-5 13-10 13s-10-5-10-13V17zm20 4h6c6 0 9 3 9 8s-3 8-9 8h-4" fill="none" stroke="#edf4ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 12c0-4 4-5 4-9M28 12c0-4 4-5 4-9" fill="none" stroke="#c58b3a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="175" y="904" fill="#6ee7be" font-family="Arial, sans-serif" font-size="25" font-weight="700">SQL · Power BI · DAX · Business analysis</text>
+</svg>
