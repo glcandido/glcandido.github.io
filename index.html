@@ -80,7 +80,7 @@
     .value h3 { margin: 0 0 7px; font-size: 1rem; }
     .value p { margin: 0; color: var(--muted); font-size: .9rem; }
 
-    .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 42px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 42px; }
     .project { display: flex; flex-direction: column; overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
     .project-visual { position: relative; display: flex; flex-direction: column; min-height: 0; aspect-ratio: 1.57; padding: 22px; background: linear-gradient(135deg, #153c61, #0d1b30 68%); }
     .project-visual-image { padding: 0; overflow: hidden; background: #071222; }
@@ -164,7 +164,7 @@
         <div class="profile-details">
           <p class="profile-location">Based in Ireland</p>
           <p class="profile-role">Business Analyst</p>
-          <p class="profile-tools">SQL · Excel · Power Query · Tableau · Automation</p>
+          <p class="profile-tools">SQL · Power BI · Tableau · Power Query · Automation</p>
         </div>
       </aside>
     </section>
@@ -174,6 +174,26 @@
       <h2 class="section-title">Analytics and automation work.</h2>
       <p class="section-copy">A mix of public portfolio work and anonymised real-world case studies, focused on making business data easier to understand and use.</p>
       <div class="projects-grid">
+      <article class="project">
+        <div class="project-visual project-visual-image">
+          <img src="https://raw.githubusercontent.com/glcandido/coffee_shop_sales_analysis/main/screenshots/sales_overview.png" alt="Coffee Shop Sales Overview Power BI dashboard showing KPIs, revenue by store and category, and monthly revenue trend" />
+        </div>
+        <div class="project-body">
+          <p class="eyebrow">Coffee shop sales analysis</p>
+          <h3>From SQL exploration to a published Power BI report.</h3>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Power BI</span><span class="tag">DAX</span></div>
+          <p>Built an end-to-end analysis of roughly 149,000 transaction records across three New York coffee shop locations, starting with SQL EDA and finishing with a three-page interactive Power BI report.</p>
+          <ul class="project-points">
+            <li>Validated the data grain and replaced an unsupported AOV assumption with Average Transaction Record Value.</li>
+            <li>Used CTEs, window functions, ranking, and DAX filter context to analyse stores, products, trends, and holidays.</li>
+            <li>Published the report and documented the full analytical process, including mistakes, limitations, findings, and recommendations.</li>
+          </ul>
+          <div class="project-links">
+            <a class="text-link" href="https://github.com/glcandido/coffee_shop_sales_analysis" target="_blank" rel="noreferrer">View the case study ↗</a>
+          </div>
+        </div>
+      </article>
+
       <article class="project">
         <div class="project-visual project-visual-image">
           <img src="assets/olist-ecommerce-cover.svg" alt="Illustrative Olist e-commerce dashboard with sales trend and category comparison" />
@@ -233,7 +253,7 @@
       <h2 class="section-title">Skills used to turn data into useful work.</h2>
       <p class="section-copy">A practical toolkit across analysis, data quality, reporting, and operational automation.</p>
       <div class="skills-grid">
-        <article class="skill-card"><h3>Analysis &amp; reporting</h3><p>Turning raw data into clear answers, KPI views, and decision-ready reporting.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power Query</span><span class="tag">PivotTables</span><span class="tag">Tableau</span></div></article>
+        <article class="skill-card"><h3>Analysis &amp; reporting</h3><p>Turning raw data into clear answers, KPI views, and decision-ready reporting.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Excel</span><span class="tag">Power Query</span><span class="tag">Tableau</span></div></article>
         <article class="skill-card"><h3>Data quality &amp; process</h3><p>Improving the reliability of operational information before it drives a decision.</p><div class="tags"><span class="tag">Data cleaning</span><span class="tag">Validation</span><span class="tag">KPI design</span><span class="tag">Data storytelling</span></div></article>
         <article class="skill-card"><h3>Automation &amp; operations</h3><p>Removing repetitive spreadsheet work while keeping everyday business processes dependable.</p><div class="tags"><span class="tag">Google Sheets</span><span class="tag">Apps Script</span><span class="tag">Advanced formulas</span><span class="tag">API integration</span></div></article>
       </div>
@@ -248,7 +268,7 @@
         <div class="about-copy">
           <p>Hi, I’m Guilherme, a Business Analyst focused on turning everyday operational information into clearer answers and better decisions.</p>
           <p>My background in customer-facing and operational roles has shown me how much time businesses lose to manual processes, scattered spreadsheets, and reporting that does not answer the real question. That is where I like to work: understanding the process, improving the data, and making the result useful to the people running the business.</p>
-          <p>I bring a practical toolkit across SQL, Tableau, Excel, Google Sheets, reporting automation, and data quality—always with the business context in mind.</p>
+          <p>I bring a practical toolkit across SQL, Power BI, DAX, Tableau, Excel, Google Sheets, reporting automation, and data quality—always with the business context in mind.</p>
         </div>
       </div>
     </section>
