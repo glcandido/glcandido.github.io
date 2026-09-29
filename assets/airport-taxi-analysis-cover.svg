@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1570 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative airport transfer and local taxi service analysis</title>
+  <desc id="desc">A stylised transport analytics cover showing airport and taxi service volume, cancellations and booking-source performance.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123e61"/><stop offset="1" stop-color="#091629"/></linearGradient>
+    <linearGradient id="trend" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#71c7ff"/><stop offset="1" stop-color="#6ee7be"/></linearGradient>
+  </defs>
+  <rect width="1570" height="1000" fill="url(#bg)"/>
+  <text x="100" y="125" fill="#bfe6ff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="5">AIRPORT TRANSFERS &amp; TAXI SERVICE</text>
+  <text x="100" y="180" fill="#9db1ce" font-family="Arial, sans-serif" font-size="26">Service mix, cancellation risk &amp; acquisition quality</text>
+
+  <g transform="translate(100 250)">
+    <rect width="845" height="570" rx="24" fill="#0b1b31" stroke="#46708f" stroke-opacity=".55"/>
+    <text x="50" y="65" fill="#c9d7e9" font-family="Arial, sans-serif" font-size="25" font-weight="700">Completed bookings by week</text>
+    <g stroke="#38546f" stroke-opacity=".58" stroke-width="2"><path d="M50 150H795M50 270H795M50 390H795M50 510H795"/></g>
+    <g fill="#21344d"><rect x="85" y="325" width="72" height="185" rx="10"/><rect x="230" y="288" width="72" height="222" rx="10"/><rect x="375" y="205" width="72" height="305" rx="10"/><rect x="520" y="342" width="72" height="168" rx="10"/></g>
+    <g fill="url(#trend)"><rect x="173" y="390" width="72" height="120" rx="10"/><rect x="318" y="356" width="72" height="154" rx="10"/><rect x="463" y="274" width="72" height="236" rx="10"/><rect x="608" y="303" width="72" height="207" rx="10"/></g>
+    <g fill="#c9d7e9" font-family="Arial, sans-serif" font-size="19"><text x="92" y="545">W1</text><text x="237" y="545">W2</text><text x="382" y="545">W3</text><text x="527" y="545">W4</text></g>
+    <g font-family="Arial, sans-serif" font-size="18" font-weight="700"><circle cx="610" cy="74" r="7" fill="#71c7ff"/><text x="625" y="80" fill="#a6b8d0">Airport Transfer</text><circle cx="763" cy="74" r="7" fill="#6ee7be"/><text x="778" y="80" fill="#a6b8d0">Local Taxi</text></g>
+  </g>
+
+  <g transform="translate(1010 250)">
+    <rect width="460" height="570" rx="24" fill="#0b1b31" stroke="#46708f" stroke-opacity=".55"/>
+    <text x="44" y="65" fill="#c9d7e9" font-family="Arial, sans-serif" font-size="25" font-weight="700">Cancellation view</text>
+    <g transform="translate(44 122)" font-family="Arial, sans-serif">
+      <text x="0" y="0" fill="#a6b8d0" font-size="19">Airport Transfer</text>
+      <text x="320" y="0" fill="#71c7ff" font-size="21" font-weight="700">5.95%</text>
+      <rect x="0" y="22" width="372" height="26" rx="8" fill="#21344d"/><rect x="0" y="22" width="221" height="26" rx="8" fill="#71c7ff"/>
+      <text x="0" y="112" fill="#a6b8d0" font-size="19">Local Taxi</text>
+      <text x="320" y="112" fill="#6ee7be" font-size="21" font-weight="700">7.44%</text>
+      <rect x="0" y="134" width="372" height="26" rx="8" fill="#21344d"/><rect x="0" y="134" width="276" height="26" rx="8" fill="#6ee7be"/>
+      <line x1="0" y1="238" x2="372" y2="238" stroke="#38546f" stroke-width="2"/>
+      <text x="0" y="285" fill="#a6b8d0" font-size="19">Gross-to-realised gap</text>
+      <text x="0" y="337" fill="#bfe6ff" font-size="42" font-weight="700">€1,259.80</text>
+      <text x="0" y="390" fill="#9db1ce" font-size="18">14 cancelled bookings</text>
+    </g>
+  </g>
+
+  <g transform="translate(105 850)">
+    <circle cx="27" cy="27" r="27" fill="#2f5d62"/>
+    <path d="M12 30h30l-3 13H15zM19 30V18h16v12M24 43h0M34 43h0" fill="none" stroke="#edf4ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="180" y="912" fill="#6ee7be" font-family="Arial, sans-serif" font-size="25" font-weight="700">SQL · Power BI · DAX · Data storytelling</text>
+</svg>
